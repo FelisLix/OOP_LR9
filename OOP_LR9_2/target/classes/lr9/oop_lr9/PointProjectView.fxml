@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="330.0" prefWidth="605.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="lr9.oop_lr9.PointController">
+    <Label layoutX="99.0" layoutY="26.0" text="Початок інтервалу">
+        <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="1.0" blue="0.550000011920929" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="0.3166666626930237" blue="1.0" />
+                        </color>
+                    </Stop>
+                </stops>
+            </RadialGradient>
+        </textFill>
+    </Label>
+    <Label layoutX="110.0" layoutY="87.0" text="Крок табуляції">
+        <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="1.0" blue="0.550000011920929" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="0.3166666626930237" blue="1.0" />
+                        </color>
+                    </Stop>
+                </stops>
+            </RadialGradient>
+        </textFill>
+    </Label>
+    <Label layoutX="104.0" layoutY="56.0" text="Кінець інтервалу">
+        <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="1.0" blue="0.550000011920929" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="0.3166666626930237" blue="1.0" />
+                        </color>
+                    </Stop>
+                </stops>
+            </RadialGradient>
+        </textFill>
+    </Label>
+    <TextField layoutX="246.0" layoutY="22.0" prefHeight="25.0" prefWidth="220.0" fx:id="x1Field" />
+    <TextField layoutX="246.0" layoutY="52.0" prefHeight="25.0" prefWidth="220.0" fx:id="x2Field" />
+    <TextField fx:id="stepField" layoutX="246.0" layoutY="83.0" prefHeight="25.0" prefWidth="220.0" />
+    <Button contentDisplay="CENTER" layoutX="40.0" layoutY="130.0" mnemonicParsing="false" onAction="#showResults" prefHeight="25.0" prefWidth="520.0" text="ВВЕСТИ" textAlignment="CENTER">
+        <textFill>
+            <LinearGradient>
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="1.0" blue="0.550000011920929" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="0.3166666626930237" blue="1.0" />
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </textFill>
+        <font>
+            <Font name="System Bold" size="11.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+    <Label fx:id="theSmallestY" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="219.0" prefHeight="32.0" prefWidth="600.0" text="Найменше значення функції :">
+        <textFill>
+            <RadialGradient centerX="0.5" centerY="0.6990521327014219" radius="0.5">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.07619047909975052" blue="1.0" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="1.0" blue="0.5904762148857117" />
+                        </color>
+                    </Stop>
+                </stops>
+            </RadialGradient>
+        </textFill>
+    </Label>
+    <Label fx:id="theBiggestY" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="187.0" prefHeight="32.0" prefWidth="600.0" text="Найбільше значення функції :">
+        <textFill>
+            <RadialGradient centerX="0.5" centerY="0.6990521327014219" radius="0.5">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.07619047909975052" blue="1.0" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="1.0" blue="0.5904762148857117" />
+                        </color>
+                    </Stop>
+                </stops>
+            </RadialGradient>
+        </textFill>
+    </Label>
+    <Label fx:id="showSteps" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="155.0" prefHeight="32.0" prefWidth="600.0" text="Кількість кроків :">
+        <textFill>
+            <RadialGradient centerX="0.5" centerY="0.6990521327014219" radius="0.5">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.07619047909975052" blue="1.0" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="1.0" blue="0.5904762148857117" />
+                        </color>
+                    </Stop>
+                </stops>
+            </RadialGradient>
+        </textFill>
+    </Label>
+    <Label fx:id="showArithm" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="251.0" prefHeight="32.0" prefWidth="600.0" text="Середнє арифметичне значень функції :">
+        <textFill>
+            <RadialGradient centerX="0.5" centerY="0.6990521327014219" radius="0.5">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.07619047909975052" blue="1.0" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="1.0" blue="0.5904762148857117" />
+                        </color>
+                    </Stop>
+                </stops>
+            </RadialGradient>
+        </textFill>
+    </Label>
+    <Label fx:id="showSum" alignment="BOTTOM_LEFT" layoutX="30.0" layoutY="283.0" prefHeight="32.0" prefWidth="600.0" text="Сума значень функції :">
+        <textFill>
+            <RadialGradient centerX="0.5" centerY="0.6990521327014219" radius="0.5">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.07619047909975052" blue="1.0" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="1.0" blue="0.5904762148857117" />
+                        </color>
+                    </Stop>
+                </stops>
+            </RadialGradient>
+        </textFill>
+    </Label>
+</Pane>
